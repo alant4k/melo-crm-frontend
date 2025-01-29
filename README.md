@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard em Next
 
-## Getting Started
+Este projeto tem como objetivo construir um Dashboard simples utilizando Next. O sistema é voltado para o gerenciamento básico de clientes, oportunidades de vendas, tarefas e relatórios, permitindo que os usuários possam visualizar e gerenciar essas informações de maneira prática e intuitiva.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### 1. Cadastro e Gestão de Clientes
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Adicionar Cliente**: Cadastro de informações como nome, e-mail, telefone, e endereço.
+- **Listar Clientes**: Visualizar todos os clientes cadastrados.
+- **Editar Cliente**: Alterar as informações de um cliente existente.
+- **Excluir Cliente**: Remover um cliente do sistema.
+- **Gerenciar Contatos**: Registrar detalhes sobre os contatos realizados com os clientes, como telefone, e-mail, e data do último contato.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### 2. Gestão de Oportunidades de Vendas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Cadastrar Oportunidade**: Criar uma nova oportunidade de venda para um cliente, com informações sobre valor, estágio da venda, e data de fechamento.
+- **Visualizar Oportunidades**: Exibir todas as oportunidades de vendas registradas.
+- **Alterar Estágio**: Alterar o estágio da oportunidade (ex: 'Prospecção', 'Negociação', 'Fechada').
+- **Histórico de Oportunidades**: Registrar e exibir mudanças de status e atualizações em uma oportunidade.
 
-## Learn More
+#### 3. Tarefas e Atividades
 
-To learn more about Next.js, take a look at the following resources:
+- **Adicionar Tarefa**: Criar tarefas relacionadas aos clientes ou às oportunidades (ex: telefonemas, reuniões, follow-ups).
+- **Listar Tarefas**: Visualizar todas as tarefas pendentes.
+- **Marcar Tarefa como Concluída**: Atualizar o status das tarefas à medida que forem concluídas.
+- **Atribuir Data de Vencimento**: Definir datas para o cumprimento das tarefas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 4. Relatórios Básicos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Dashboard**: Painel de controle com métricas básicas como o total de vendas fechadas, número de oportunidades em cada estágio, e tarefas pendentes.
+- **Relatórios de Vendas**: Exibir o valor total das vendas realizadas e as oportunidades que estão em aberto.
 
-## Deploy on Vercel
+#### 5. Gestão de Usuários
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Cadastro de Usuários**: Cadastro de usuários com diferentes permissões (administrador, representante de vendas).
+- **Permissões**: Controle de permissões para cada tipo de usuário, definindo quem pode visualizar ou editar determinadas informações.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estrutura do Projeto
+
+O projeto será dividido em quatro **partes**:
+
+#### 1. `clients`
+
+Funcionalidades: Cadastro e gerenciamento de clientes, além de registros de contatos.
+
+#### 2. `sales`
+
+Funcionalidades: Gerenciamento de oportunidades de vendas, incluindo a criação e atualização de estágios.
+
+#### 3. `tasks`
+
+Funcionalidades: Gerenciamento de tarefas relacionadas aos clientes e oportunidades, com vencimento e status de conclusão.
+
+#### 4. `user_control`
+
+Funcionalidades: Gerenciamento de usuários e permissões no sistema.
